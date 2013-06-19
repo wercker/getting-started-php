@@ -1,4 +1,5 @@
-<phpunit colors="true" strict="true">
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="tests/bootstrap.php">
   <testsuites>
     <testsuite name="integration tests">
       <directory>tests</directory>
