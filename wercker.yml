@@ -1,0 +1,13 @@
+box: wercker/php
+build:
+  steps:
+    - script:
+        name: install dependencies
+        code: |-
+            composer install
+    - script:
+        name: serve application
+        code: php -S localhost:8000 >> /dev/null &
+    - script:
+        name: PHPUnit
+        code: phpunit
