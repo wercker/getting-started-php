@@ -2,12 +2,19 @@ box: wercker/php
 build:
   steps:
     - script:
+        name: List available tools
+        code: |-
+            phpunit -version
+            composer --version
+            pear version
+            pyrus version
+    - script:
         name: install dependencies
         code: |-
             composer install
     - script:
-        name: serve application
+        name: Serve application
         code: php -S localhost:8000 >> /dev/null &
     - script:
-        name: PHPUnit
+        name: PHPUnit integration tests
         code: phpunit --configuration phpunit.xml
