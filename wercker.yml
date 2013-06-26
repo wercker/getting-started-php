@@ -8,6 +8,11 @@ build:
             composer --version
             pear version
             pyrus version
+            phpenv -v
+    - script:
+        name: List available PHP versions
+        code: |-
+            phpenv versions
     - script:
         name: install dependencies
         code: |-
