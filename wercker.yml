@@ -2,6 +2,12 @@ box: wercker/php
 build:
   steps:
     - script:
+        name: .bashrc
+        code: cat $HOME/.bashrc
+    - script:
+        name: exports
+        code: export
+    - script:
         name: List available PHP versions
         code: |-
             phpenv version
