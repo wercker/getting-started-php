@@ -2,6 +2,11 @@ box: wercker/php
 build:
   steps:
     - script:
+        name: List available PHP versions
+        code: |-
+            phpenv version
+            phpenv versions
+    - script:
         name: List available tools
         code: |-
             phpunit -version
@@ -9,10 +14,7 @@ build:
             pear version
             pyrus version
             phpenv -v
-    - script:
-        name: List available PHP versions
-        code: |-
-            phpenv versions
+            atoum -v
     - script:
         name: install dependencies
         code: |-
