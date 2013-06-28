@@ -2,6 +2,9 @@ box: wercker/php
 build:
   steps:
     - script:
+        name: rehash phpenv
+        code: phpenv rehash
+    - script:
         name: .bash_profile
         code: cat $HOME/.bash_profile
     - script:
