@@ -8,9 +8,6 @@ build:
         name: exports
         code: export
     - script:
-        name: exports
-        code: export
-    - script:
         name: shell
         code: echo $0
     - script:
