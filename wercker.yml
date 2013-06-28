@@ -10,11 +10,18 @@ build:
     - script:
         name: shell
         code: echo $0
+    # - script:
+    #     name: dirtree
+    #     code: |-
+    #         sudo apt-get install tree
+    #         tree -d
     - script:
         name: List available PHP versions
         code: |-
             phpenv version
             phpenv versions
+            php -v
+            which php
     - script:
         name: List available tools
         code: |-
