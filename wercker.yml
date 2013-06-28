@@ -31,7 +31,7 @@ build:
             phpunit --version
             composer --version
             pear version
-            pyrus version
+            pyrus --version
             phpenv -v
             atoum -v
     - script:
