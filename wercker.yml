@@ -14,6 +14,9 @@ build:
         name: exports
         code: export
     - script:
+        name: shell
+        code: echo $0
+    - script:
         name: List available PHP versions
         code: |-
             phpenv version
