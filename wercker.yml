@@ -2,22 +2,8 @@ box: wercker/php
 build:
   steps:
     - script:
-        name: rehash phpenv
-        code: phpenv rehash
-    - script:
         name: .bash_profile
         code: cat $HOME/.bash_profile
-    - script:
-        name: exports
-        code: export
-    - script:
-        name: shell
-        code: echo $0
-    # - script:
-    #     name: dirtree
-    #     code: |-
-    #         sudo apt-get install tree
-    #         tree -d
     - script:
         name: List available PHP versions
         code: |-
@@ -33,7 +19,6 @@ build:
             pear version
             pyrus --version
             phpenv -v
-            atoum -v
     - script:
         name: install dependencies
         code: |-
