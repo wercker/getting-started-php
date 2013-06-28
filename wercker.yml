@@ -2,7 +2,7 @@ box: wercker/php
 build:
   steps:
     - script:
-        name: .bashrc
+        name: .bash_profile
         code: cat $HOME/.bash_profile
     - script:
         name: exports
