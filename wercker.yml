@@ -18,7 +18,7 @@ build:
     - script:
         name: List available tools
         code: |-
-            phpunit -version
+            phpunit --version
             composer --version
             pear version
             pyrus version
