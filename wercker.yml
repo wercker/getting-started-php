@@ -3,13 +3,10 @@ build:
   steps:
     - script:
         name: .bashrc
-        code: cat $HOME/.bashrc
+        code: cat $HOME/.bash_profile
     - script:
         name: exports
         code: export
-    - script:
-        name: source .bashrc
-        code: source $HOME/.bashrc
     - script:
         name: exports
         code: export
