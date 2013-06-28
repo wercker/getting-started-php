@@ -8,6 +8,12 @@ build:
         name: exports
         code: export
     - script:
+        name: source .bashrc
+        code: source $HOME/.bashrc
+    - script:
+        name: exports
+        code: export
+    - script:
         name: List available PHP versions
         code: |-
             phpenv version
