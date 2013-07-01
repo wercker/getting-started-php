@@ -2,30 +2,9 @@ box: wercker/php
 build:
   steps:
     - script:
-        name: Install extensions
-        code: |-
-          pecl install apc
-          pecl install memcache
-          pecl install SQLite
-    - script:
-        name: List available PHP versions
-        code: |-
-            phpenv version
-            phpenv versions
-            php -v
-            which php
-    - script:
-        name: List available tools
-        code: |-
-            phpunit --version
-            composer --version
-            pear version
-            pyrus --version
-            phpenv -v
-    - script:
         name: install dependencies
         code: |-
-            composer install
+            composer install --no-interaction
     - script:
         name: Serve application
         code: php -S localhost:8000 >> /dev/null &
