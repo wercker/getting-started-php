@@ -2,11 +2,11 @@ box: wercker/php
 build:
   steps:
     - script:
-  		  name: Install extensions
-  		  code: |-
-  			  pecl install apc
-  			  pecl install memcache
-  			  pecl install SQLite
+        name: Install extensions
+        code: |-
+          pecl install apc
+          pecl install memcache
+          pecl install SQLite
     - script:
         name: List available PHP versions
         code: |-
