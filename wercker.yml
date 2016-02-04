@@ -1,4 +1,4 @@
-box: wercker/php
+box: perfectweb/development
 build:
   steps:
     - script:
