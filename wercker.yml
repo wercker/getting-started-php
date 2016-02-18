@@ -2,17 +2,11 @@ box: php
 dev:
   steps:
     - script:
-        name: install phpunit
-        code: |-
-          curl -L https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
-          chmod +x /usr/local/bin/phpunit
-    - script:
         name: install composer
         code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     - script:
         name: install dependencies
-        code: |-
-            composer install --no-interaction
+        code: composer install --no-interaction
     - internal/watch:
         code: php -S 0.0.0.0:8000
         reload: true
@@ -28,8 +22,7 @@ build:
         code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     - script:
         name: install dependencies
-        code: |-
-            composer install --no-interaction
+        code: composer install --no-interaction
     - script:
         name: Serve application
         code: php -S localhost:8000 >> /dev/null &
