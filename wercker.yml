@@ -1,6 +1,8 @@
 box: php
 dev:
   steps:
+    - install-packages:
+        packages: git
     - script:
         name: install composer
         code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
@@ -12,6 +14,8 @@ dev:
         reload: true
 build:
   steps:
+    - install-packages:
+        packages: git
     - script:
         name: install phpunit
         code: |-
