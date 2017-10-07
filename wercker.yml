@@ -34,7 +34,7 @@ build:
         code: composer install --no-interaction
     - script:
         name: Serve application
-        code: php -S localhost:8080 >> /dev/null &
+        code: php -S localhost:8080  >> /dev/null &
     - script:
         name: PHPUnit integration tests
         code: phpunit --configuration phpunit.xml
