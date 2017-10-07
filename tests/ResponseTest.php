@@ -1,7 +1,8 @@
 <?php
+use PHPUnit\Framework\TestCase;
 use \Httpful\Request;
 
-class CitiesResponseTest extends PHPUnit_Framework_TestCase
+class CitiesResponseTest extends TestCase
 {
   public function testCitiesListContainsAmsterdam()
   {
