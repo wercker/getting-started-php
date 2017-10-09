@@ -6,7 +6,7 @@ class CitiesResponseTest extends TestCase
 {
   public function testCitiesListContainsAmsterdam()
   {
-    $uri = "http://localhost:8000";
+    $uri = "http://localhost:8080";
     $response = Request::get($uri)->send();
 
     $this->assertEquals("application/json", $response->headers["Content-Type"]);

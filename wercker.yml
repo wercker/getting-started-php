@@ -1,4 +1,8 @@
-box: php
+box:
+    id: php
+    ports:
+        - "8080"
+
 dev:
   steps:
     - install-packages:
@@ -10,8 +14,9 @@ dev:
         name: install dependencies
         code: composer install --no-interaction
     - internal/watch:
-        code: php -S 0.0.0.0:8000
+        code: php -S localhost:8080
         reload: true
+        
 build:
   steps:
     - install-packages:
@@ -29,7 +34,7 @@ build:
         code: composer install --no-interaction
     - script:
         name: Serve application
-        code: php -S localhost:8000 >> /dev/null &
+        code: php -S localhost:8080 >> /dev/null &
     - script:
         name: PHPUnit integration tests
         code: phpunit --configuration phpunit.xml
